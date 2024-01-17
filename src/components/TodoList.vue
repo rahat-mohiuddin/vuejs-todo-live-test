@@ -29,10 +29,10 @@ function editTask(index){
     OpenModal.value = true
     selectedTask.value = index
     editedTask.value = {...tasks.value[index]}
-    this.tasks.push({name: newTaskName.value, time: newTaskTime.value})
 }
 
 function updateTask(){
+    tasks.value[selectedTask.value] = {...editedTask.value}
     OpenModal.value = false
 }
 
